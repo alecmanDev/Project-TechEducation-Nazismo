@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+/* VARIÁVEIS */
+
+:root {
+  --main-color: #ff466b;
+  --black: #13131a;
+  --bg: #010103;
+  --border: .1rem solid rgba(255, 255, 255, .3);
+  --grade: linear-gradient(135deg, rgba(26, 245, 159, 1), rgba(189, 245, 26, 1));
+}
+
+/* CSS GERAL */
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none; 
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+/* SCROLL BAR HTML */
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+/* CSS BODY, SECTION */
+
+body {
+  background: var(--bg);
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+.header {
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+}
+
+.header .logo h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.header .nav-bar a {
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+  transition: 1s all ease-out;
+} 
+
+.header .nav-bar a:hover {
+  color: var(--main-color);
+  border-bottom: .1rem solid var(--main-color);
+  padding-bottom: .5rem;
+}
+
+.header .icons div {
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+.header .icons div:hover {
+  color: var(--main-color);
+}
+
+#menu-btn {
+  display: none;
+}
+
+/* MEDIAS QUERRIES */
+
+@media (max-width: 991px) {
+    html {
+      font-size: 55%;
+    }
+
+    .header {
+      padding: 1.5rem 2rem;
+    }
+
+    section {
+      padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #menu-btn {
+      display: inline-block;
+    }
+
+    .header .nav-bar {
+      position: absolute;
+      top: 100%; right: -100%;
+      background: #fff;
+      width: 30rem;
+      height: calc(100vh - 9.5rem);
+      display: flex; flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 1rem;
+    }
+
+    .header .nav-bar.active {
+      right: 0;
+    }
+
+    .header .nav-bar a {
+      color: var(--black);
+      display: block;
+      margin: 1.5rem;
+      padding: .5rem;
+      font-size: 2rem;
+    }
+
+    .home {
+      background-position: left;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .home .content h3{
+      font-size: 4.5rem;
+    }
+
+    .home .content p {
+      font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(../images/background/maxresdefault-removebg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content {
+  max-width: 60rem;
+
+  background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255 .1));
+  backdrop-filter: blur(1rem);
+  box-shadow: 0 .8rem 3.2rem 0 rgba(0, 0, 0, 0.36);
+  border: .1rem solid rgba(255, 255, 255, .16);
+  border-radius: 2.4rem;
+  padding: 2rem;
+  color: #fff;
+}
+
+.home .content h3 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.home .content p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #eee;
+  text-transform: initial;
+}
+
+.btn {
+  height: 6rem;
+  width: 100%;
+  border-radius: 1rem;
+  outline: none;
+  background: var(--grade);
+  background-size: 200%;
+  cursor: pointer;
+  transition: .5s all;
+}
+.btn {
+  font-size: 4rem;
+  color: var(--black);
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1rem;
+  transition: .5s all;
+}
+.bnt:hover, .bnt:hover {
+  transform: scale(1.025);
+  letter-spacing: 1.5rem;
+  box-shadow: 0 0 35rem var(--grade);
+}
+
