@@ -9,6 +9,7 @@
   --bg: #010103;
   --border: .1rem solid rgba(255, 255, 255, .3);
   --grade: linear-gradient(135deg, rgba(26, 245, 159, 1), rgba(189, 245, 26, 1));
+  --grade-t: linear-gradient(135deg, rgba(189, 245, 159, 1), rgba(89, 245, 26, 1))
 }
 
 /* CSS GERAL */
@@ -55,6 +56,19 @@ body {
 
 section {
   padding: 2rem 7%;
+}
+
+.heading {
+ text-align: center;
+ color: #fff;
+ text-transform: uppercase;
+ padding-bottom: 3.5rem;
+ font-size: 4rem;
+}
+
+.heading span {
+  color: red;
+  text-transform: uppercase;
 }
 
 /* BARRA DE NAVEGAÇÃO */
@@ -164,6 +178,11 @@ section {
       font-size: 1.5rem;
     }
 
+    .h-nazi {
+      background-position: center;
+      justify-content: center;
+      text-align: center;
+    }
 }
 
 @media (max-width: 450px) {
@@ -180,7 +199,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(../images/background/maxresdefault-removebg.png);
+  background: url(../images/background/bg-main.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -213,27 +232,124 @@ section {
   text-transform: initial;
 }
 
-.btn {
+.subscribe {
+  display: flex;
   height: 6rem;
-  width: 100%;
-  border-radius: 1rem;
-  outline: none;
-  background: var(--grade);
-  background-size: 200%;
-  cursor: pointer;
-  transition: .5s all;
 }
-.btn {
-  font-size: 4rem;
+.subscribe button {
+  width: 100%;
+  font-size: 3rem;
   color: var(--black);
-  text-transform: uppercase;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1rem;
-  transition: .5s all;
-}
-.bnt:hover, .bnt:hover {
-  transform: scale(1.025);
-  letter-spacing: 1.5rem;
-  box-shadow: 0 0 35rem var(--grade);
+  border-radius: 1rem;
+  cursor: pointer;
+  background: var(--grade);
+  box-shadow: inset 0 0 3.2rem 0 var(--grade), 0 0 3.2rem 0 (--grade-t);
+  position: relative;
 }
 
+.subscribe button::before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: var(--grade-t);
+
+  height: 100%;
+  width: 100%;
+  transform: perspective(6.4rem) rotateX(40deg) scale(1, 0.35);
+  filter: blur(6.4rem);
+  pointer-events: none;
+}
+
+.subscribe button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 12rem 3.2rem var(--grade);
+  opacity: 0;
+  background-color: var(--grade-t);
+  z-index: -1;
+  transform: opacity 100ms linear;
+}
+
+.subscribe button:hover::before,
+.subscribe button:hover::after {
+  opacity: 1;
+}
+
+.subscribe button:hover {
+  color: #fff;
+}
+
+.h-nazi {
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+.h-nazi .row {
+  display: flex;
+  align-items: center;
+  background-color: var(--black);
+  flex-wrap: wrap;
+}
+
+.h-nazi .row .image {
+  flex: 1 1 45rem;
+}
+
+.h-nazi .row .image img {
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+.h-nazi .row .content {
+  flex: 1 1 45rem;
+  padding: 2rem;
+}
+
+.h-nazi .row .content h3 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: initial;
+}
+.h-nazi .row .content span {
+  color: red;
+}
+
+.h-nazi .row .content p {
+  font-size: 1.6rem;
+  color: #ccc;
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+
+.inscription {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  height: calc(50% - 100vh);
+
+
+}
+
+.form::before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/background/bg-insc.png);
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+}
