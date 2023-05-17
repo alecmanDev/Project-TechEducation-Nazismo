@@ -9,7 +9,9 @@
   --bg: #010103;
   --border: .1rem solid rgba(255, 255, 255, .3);
   --grade: linear-gradient(135deg, rgba(26, 245, 159, 1), rgba(189, 245, 26, 1));
-  --grade-t: linear-gradient(135deg, rgba(189, 245, 159, 1), rgba(89, 245, 26, 1))
+  --grade-t: linear-gradient(135deg, rgba(189, 245, 159, 1), rgba(89, 245, 26, 1));
+  --grade-i: linear-gradient(135deg, rgba(255, 245, 159, 1), rgba(255, 245, 26, 1));
+  --grade-in: linear-gradient(135deg, rgba(255, 245, 26, 1), rgba(255, 245, 159, 1), rgba(26, 245, 155, 1));
 }
 
 /* CSS GERAL */
@@ -94,7 +96,7 @@ section {
   margin: 0 1rem;
   font-size: 1.6rem;
   color: #fff;
-  transition: 1s all ease-out;
+  transition: .5s all ease-out;
 } 
 
 .header .nav-bar a:hover {
@@ -332,12 +334,29 @@ section {
   min-height: 100vh;
   display: flex; flex-direction: column;
   align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.header-form {
+  background-color: #262630;
+  color: #eee;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.container-form {
+  overflow: hidden;
+  border-radius: 2rem;
 }
 
 .form {
+  padding: 2rem;
+
+  background-color: var(--black);
+  color: #eee;
+  position: relative;
   height: calc(50% - 100vh);
-
-
+  max-height: fit-content;
 }
 
 .form::before {
@@ -345,11 +364,116 @@ section {
   position: absolute;
   background-image: url(../images/background/bg-insc.png);
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  top: 0;
-  left: 0;
   z-index: -1;
-  height: 100vh;
-  width: 100vw;
+  height: 50%;
+  width: 50%;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+}
+
+.form-control input {
+  border: .2rem solid #474761;
+  display: block;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.form-control i {
+  font-size: 2.5rem;
+  color: #010103;
+  position: absolute;
+  top: 2.7rem;
+  right: 1rem;
+  visibility: hidden;
+}
+
+.form-control small {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form .form-class {
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.form .form-class .title-class h6{
+  font-size: 1.5rem;
+}
+
+.form .form-class label {
+  font-size: 1.5rem;
+}
+
+.form .form-class small {
+  font-size: 1.2rem;
+  visibility: hidden;
+}
+
+.form .class-name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.success i .fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.success i .fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.form .form-class.error small {
+  visibility: visible;
+}
+
+.form .form-class.success small {
+  visibility: hidden;
+}
+
+.form button {
+  background: var(--grade-i);
+  border: 2px solid #eee;
+  color: #000000;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  cursor: pointer;
 }
