@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
+    <title>Rolagem de Dados</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="role-die">
+    <header class="header">
+        <a href="index.html" class="logo">
+          <h2>RPG Tech_Education</h2>
+        </a>
+    
+        <nav class="nav-bar">
+          <a href="index.html">Página Inicial</a>
+          <a href="index.html">Nazismo</a>
+          <a href="index.html">Inscrição</a>
+          <a href="dados.html">Rolagem de Dados</a>
+          <a href="#">Quem Somos</a>
+        </nav>
+        <div class="icons">
+          <div class="fa fa-bars" id="menu-btn"></div>
+        </div>
+      </header>
+    <h1 class="heading"> ROLAGEM DE DADOS</h1>
+        <div class="container-dice">
+            <div class="dice-wrapper">
+                <img  id="die-1">
+                <img  id="die-2">
+        
+            </div>
+            <p id="total"></p>
+            <button onclick="roll()">LANCE OS DADOS</button>
+        </div>
+    <!--Script-->
+    <script src="assets/js/role-dado.js"></script>
+</body>
+</html>

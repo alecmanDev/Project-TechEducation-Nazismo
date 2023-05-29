@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
     <title>RPG Tech_Education | Nazismo</title>
 
     <!-- Fonte Link -->
@@ -23,7 +24,7 @@
       <a href="#home">Página Inicial</a>
       <a href="#hist">Nazismo</a>
       <a href="#insc">Inscrição</a>
-      <a href="#">Rolagem de Dados</a>
+      <a href="dados.html">Rolagem de Dados</a>
       <a href="#">Quem Somos</a>
     </nav>
     <div class="icons">
@@ -50,22 +51,26 @@
       </div>
       <div class="content">
         <h3>O Surgimento de uma <span>Ideologia</span></h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis natus non, rem voluptate sed possimus deserunt quas voluptatem assumenda. In, odit. Porro numquam consequuntur inventore sint delectus voluptatum possimus ex!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consectetur repellendus saepe, quis error nemo molestias hic minus ut excepturi. Tenetur modi optio nesciunt fuga iste mollitia atque nihil cupiditate.</p>
+        <p>O nazismo foi um movimento político e social marcado por ideais nacionalistas e extremistas que surgiu na Alemanha logo após a Primeira Guerra Mundial e alcançou grande notoriedade nesse país. Assumiu o poder em 1933, quando Adolf Hitler tornou-se chanceler da Alemanha.</p>
+        <p>Também conhecido como Partido Nacional-Socialista dos Trabalhadores Alemães, o nazismo foi o grande responsável pelo extermínio de seis milhões de judeus durante o Holocausto. Além dos judeus, outras minorias (como ciganos, homossexuais e negros) foram perseguidas e aprisionadas em campos de concentração. A suástica tornou-se o grande símbolo do nazismo.</p>
+        <p>As origens do nazismo estão primeiramente relacionadas com ideais extremistas que eram difundidos na sociedade alemã na virada do século XIX para o XX, como o nacionalismo extremado, exaltação da guerra como forma legítima de promover o desenvolvimento da nação, antissemitismo (aversão aos judeus), preconceito racial contra outras minorias, como os eslavos, etc.</p>
+        <p>A difusão desses ideais estava ligada ao darwinismo social (uma leitura incorreta da teoria da evolução das espécies de Charles Darwin), que defendia a ideia de que existiam povos biologicamente superiores. Dessa ideia nasceu o arianismo, que via o germânico (quem nasceu na Alemanha ou etnicamente descendente de alemães), cunhado como “nórdico” ou “ariano”, como naturalmente superior aos outros povos.</p>
+        <p>A sociedade alemã após a Primeira Guerra Mundial organizou-se em um sistema político liberal que ressaltava os valores de um sistema democrático representativo e que foi dominado pelo Partido Social-Democrata (o maior partido da Alemanha na década de 1920). Esse período da história alemã ficou conhecido como República de Weimar e estendeu-se de 1919 a 1933.</p>
+        <p>Esse período, no entanto, foi extremamente conturbado por causa das consequências da Primeira Guerra Mundial. A economia alemã entrou em colapso. A moeda do país sofreu desvalorização fortíssima (Hobsbawm fala que a moeda alemã em 1923 havia sido reduzida ao valor de um milionésimo de milhão do que valia em 1913), e o desemprego alcançou 44% nos anos da Grande Depressão.</p>
       </div>
     </div>
   </section>
 
   <section class="inscription" id="insc">
-    <h1 class="heading">Inscrição</h1>
+    <h1 class="heading"><span>Ins</span>crição</h1>
     <div class="container-form">
       <div class="header-form">
         <h2>Embarque na aventura</h2>
       </div>
-      <form class="form" id="form" action="#">
+      <form class="form" id="form" action="https://api.sheetmonkey.io/form/p7C1AWnhZj1EH8awnJU5Va" method="post">
         <div class="form-control">
           <label for="username">Nome</label>
-          <input type="text" id="username" name="usuario_name" placeholder="Digite seu nome e sobrenome..." required/>
+          <input type="text" id="username" name="usuario_name" placeholder="Digite seu nome e sobrenome..."/>
           <i class="fas fa-exclamation-circle"></i>
           <i class="fas fa-check-circle"></i>
           <small>Mensagem de erro</small>
@@ -73,7 +78,7 @@
 
         <div class="form-control">
           <label for="email">E-mail</label>
-          <input type="text" id="email" name="usuario_email" placeholder="Digite seu e-mail..." required />
+          <input type="text" id="email" name="usuario_email" placeholder="Digite seu e-mail..."/>
           <i class="fas fa-exclamation-circle"></i>
           <i class="fas fa-check-circle"></i>
           <small>Mensagem de erro</small>
@@ -127,7 +132,7 @@
             </div>
 
             <div class="form-class-name">
-              <label for="enf22m">ENF2022 M</label>
+              <label for="classroom">ENF2022 M</label>
               <input type="radio" id="classroom" name="usuario_class" />
             </div>
 
@@ -158,6 +163,13 @@
           </div>
           <small>indiique sua turma!</small>
         </div>
+        <div class="confirm-form">
+          <label>
+            <input type="checkbox" name="autorizacao-dados" required>
+            Termo de Autorização de Dados Pessoais
+          </label>
+          <a href="assets/document/Política de Privacidade.pdf" download="Política de Privacidade" target="_blank">Saiba mais</a>
+        </div>
         <div class="continue-button">
           <button type="submit">Inscrever</button>
         </div>
@@ -165,72 +177,98 @@
     </div>
   </section>
 
-<!--
- <label for="inf20m">INF2020 M</label>
-  <input type="radio" id="inf20m" name="usuario_class" />
-</div>
+  <section  
+  class="faq container"
+  arial-label = "frequently asked questions">
+  <header classe="faq_header">
+        <h2 class="faq_header-title"> As pessoas também perguntam </h2>
+  </header>            
+  <div class="faq_body">           
+    <details aria-expanded="true" class="faq_panel">          
+     <summary class= "faq_label">O que é RPG?</summary>    
+     <div class="faq_panel-body">  
+        <p class="faq_panel-answer">Role-playing game, também conhecido como RPG, é um tipo de jogo</br>
+             em que os jogadores assumem papéis de personagens e criam narrativas colaborativamente.
+        </p>         
+     </div>                            
+    </details>                          
+    <details aria-expanded="false" class="faq_panel">  
+      <summary class = "faq_label">O RPG pode ser feito com outra histórias?</summary>
+      <div class="faq_panel-body">
+        <p class="faq_panel-answer">Claro que sim! A forma de como é elaborado o RPG para aprender determinado </br>
+          assunto é bem adaptável, pode ser de diversos tipos de eras ou histórias: medieval, ficção científica, pós-apocslipse, etc.
+        </p>
+      </div>
+    </details>
+     <details aria-expanded="false" class="faq_panel">  
+        <summary class = "faq_label">Quais as consequências para as decisões dos personagens?</summary>
+        <div class="faq_panel-body">
+          <p class="faq_panel-answer">Toda a decisão tem uma consequência.</br>
+            </br>
+            Pelo menos, ao se jogar RPG. Talvez você salve uma menina de ser atropelada por uma carroça, </br>
+             agradeça e dê a você uma flor, a qual você joga fora apenas para mais tarde descobrir que precisaria </br>
+             daquele item para se curar de uma doença.</br>
+            </br>     
+            
+            Ou seja, para cada decisão, uma consequência.
+          </p>
+        </div>
+      </details>
+  </div>
+  </section>
 
-<div class="form-class-name">
-  <label for="enf20m">ENF2020 M</label>
-  <input type="radio" id="enf20m" name="usuario_class" />
-</div>
+  <footer>
+    <div class = "footer_content">
+            <div class = "footer_contacts">
+                <h1> RPG Tech_Education </h1>
+                <p>Guerra contra o Nazismo</p>
 
-<div class="form-class-name">
-  <label for="inf21m">INF2021 M</label>
-  <input type="radio" id="inf21m" name="usuario_class" />
-</div>
+                <div class="footer_social_media">
+                    <a href="https://www.instagram.com/eetepacepdap/" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-<div class="form-class-name">
-  <label for="enf21m">ENF2021 M</label>
-  <input type="radio" id="enf21m" name="usuario_class" />
-</div>
+                    <a href="https://www.facebook.com/aristides.pirovano" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="footer-list">
+                <li>
+                    <h3>RPG Cabanagem</h3>
+                </li>
+                <li>
+                    <a href="rpg-cabanagem.html" class="footer-link">Galeria</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">História</a>
+                </li>
+            </ul>
+            <div class="footer_subscribe">
+                <h3>Envie seu Feedback</h3>
+                <p>
+                    Nos diga quais foram os pontos fortes e fracos desse projeto!
+                </p>
 
-<div class="form-class-name">
-  <label for="inf21t">INF2021 T</label>
-  <input type="radio" id="inf21t" name="usuario_class" />
-</div>
-
-<div class="form-class-name">
-  <label for="enf21t">ENF2021 T</label>
-  <input type="radio" id="enf21t" name="usuario_class" />
-</div>
-
-<div class="form-class-name">
-  <label for="inf22m">INF2022 M</label>
-  <input type="radio" id="inf22m" name="usuario_class" />
-</div>
-
-<div class="form-class-name">
-  <label for="enf22m">ENF2022 M</label>
-  <input type="radio" id="enf22m" name="usuario_class" />
-</div>
-
-<div class="form-class-name">
-  <label for="inf22t">INF2022 T</label>
-  <input type="radio" id="inf22t" name="usuario_class" />
-</div>
-
-<div class="form-class-name">
-  <label for="enf23m">ENF2023 M</label>
-  <input type="radio" id="enf23m" name="usuario_class" />
-</div>
-
-<div class="form-class-name">
-  <label for="inf23m">INF2023 M</label>
-  <input type="radio" id="inf23m" name="usuario_class" />
-</div>
-
-<div class="form-class-name">
-  <label for="inf23t">INF2023 T</label>
-  <input type="radio" id="inf23t" name="usuario_class" />
-</div>
-
-<div class="form-class-name">
-  <label for="enf23t">ENF2023 T</label>
-  <input type="radio" id="enf23t" name="usuario_class" />
---> 
+                <div class="input_feedback">
+                  <form action="https://api.sheetmonkey.io/form/p7C1AWnhZj1EH8awnJU5Va" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                    
+                    <label for="comentario">Comentário:</label><br>
+                    <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
+                    <button type="submit">
+                      <i class="fa-regular fa-envelope"></i>
+                    </button>
+                  </form>
+                </div>
+            </div>
+        </div>
+  </footer>
 
   <script src="assets/js/menu-itens.js"></script>
   <script src="assets/js/inscription.js"></script>
+  <script src="assets/js/form.js"></script>
   <script src="https://kit.fontawesome.com/a8d7c1fa07.js" crossorigin="anonymous"></script>
 </html>
