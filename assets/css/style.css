@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 @import url(/assets/css/rpgmodel.css);
-@import url(/assets/css/role-dado.css);
+@import url(/assets/css/sobre-devs.css);
 
 /* VARIÁVEIS */
 
@@ -137,6 +137,10 @@ section {
     section {
       padding: 2rem;
     }
+
+    .sub-title {
+      font-size: 5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -183,7 +187,7 @@ section {
       font-size: 1.5rem;
     }
 
-    .h-nazi {
+    .h-nazi, .sobre-devs {
       background-position: center;
       justify-content: center;
       text-align: center;
@@ -192,6 +196,10 @@ section {
     .form button {
       width: 100%;
       font-size: 1.7rem;
+    }
+
+    .sub-title {
+      font-size: 3rem;
     }
 }
 
@@ -207,6 +215,10 @@ section {
   .form button {
     width: 100%;
     font-size: 1.7rem;
+  }
+
+  .sub-title {
+    font-size: 2rem;
   }
 }
 
@@ -589,6 +601,7 @@ footer {
 }
 
 .footer_subscribe {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -648,14 +661,14 @@ footer {
   opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .footer_content {
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 768px) {
   .footer_content {
       grid-template-columns: repeat(1, 1fr);
       padding: 3rem 2rem;
